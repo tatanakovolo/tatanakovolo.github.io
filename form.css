@@ -1,0 +1,36 @@
+/* Code tidied up by ScrapBook */
+*, *::after, *::before { box-sizing: border-box; margin: 0px; padding: 0px; }
+body { background: rgb(255, 255, 255) none repeat scroll 0% 0%; }
+input[type="number"] { -moz-appearance: textfield; }
+.form-stages { margin: 0px auto; width: 320px; max-width: 100%; display: flex; flex-direction: column; align-items: center; }
+.form-stages__input, .form-stages__submit, .form-stages__select { display: block; width: 100%; max-width: 250px; margin: 0px auto 16px; border: 1px solid rgb(231, 231, 231); background: rgb(248, 249, 249) none repeat scroll 0% 0%; border-radius: 3px; font-size: 16px; color: rgb(0, 0, 0); padding-left: 15px; height: 40px; }
+.form-stages__input { height: 40px; font-size: 16px; outline: medium none; }
+.form-stages__input:focus { background: rgba(100, 100, 100, 0.1) none repeat scroll 0% 0%; }
+.form-stages__input[disabled] { background: rgba(100, 100, 100, 0.1) none repeat scroll 0% 0%; }
+.form-stages__select:focus { background: rgba(100, 100, 100, 0.1) none repeat scroll 0% 0%; }
+.form-stages__label { width: 100%; text-align: left; margin: 5px 0px; }
+.form-stages__submit { display: flex; justify-content: center; align-items: center; color: rgb(255, 255, 255); font-size: 24px; padding: 14px 5px; background: red none repeat scroll 0% 0%; border-width: 0px; cursor: pointer; transition: all 0.5s ease-in-out 0s; max-width: 100%; width: 100%; height: 60px; }
+.form-stages__submit:focus { outline-color: rgb(255, 150, 150); outline-offset: 2px; }
+.blue-color { background: rgb(71, 201, 237) none repeat scroll 0% 0%; border-radius: 2px; }
+.blue-color:hover { color: rgb(255, 255, 255); }
+.form-stage-2 { width: 100%; display: flex; flex-direction: column; align-items: center; }
+.form-stages__select, .form-stages__input { height: 40px; margin-bottom: 15px; padding: 5px; }
+.form-stages__select[disabled] { background-color: rgba(0, 0, 0, 0.1); }
+option { padding: 5px ! important; }
+.invalidInput { border: 3px solid red ! important; }
+.wrongNumberMessage { display: none; margin-top: 10px; margin-bottom: 10px; font-size: 16px; color: red; }
+.wrongNumberMessage--visible { display: block; width: 100%; text-align: center; }
+.js-submitBtn { display: flex; justify-content: center; align-items: center; }
+.js-submitBtn div { height: 100%; display: flex; justify-content: center; align-items: center; }
+.lds-dual-ring { display: inline-block; width: 15px; height: 15px; }
+.lds-dual-ring::after { content: ""; display: block; width: 15px; height: 15px; margin: 1px; border-radius: 50%; border-width: 5px; border-style: solid; -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; border-color: rgb(255, 255, 255) transparent; animation: 1.2s linear 0s normal none infinite running lds-dual-ring; }
+@keyframes lds-dual-ring {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+@keyframes pulse {
+0% { transform: scale(1); }
+100% { transform: scale(0.9); }
+}
+.form-stages { position: relative; }
+.small_text { font-size: 10px; margin: 10px auto; text-align: left; width: 100%; }

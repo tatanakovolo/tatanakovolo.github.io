@@ -1,0 +1,43 @@
+/* Code tidied up by ScrapBook */
+.close-popup { position: absolute; top: 20px; right: 40px; cursor: pointer; height: 40px; width: 40px; }
+.close-popup::after, .close-popup::before { display: block; width: 4px; height: 25px; content: ""; background: rgb(255, 0, 0) none repeat scroll 0% 0%; position: absolute; left: 50%; }
+.close-popup::after { transform: rotate(45deg); }
+.close-popup::before { transform: rotate(135deg); }
+.popup { display: none; position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; transition: all 0.5s ease-in-out 0s; background: rgba(0, 0, 0, 0.6) none repeat scroll 0% 0%; z-index: 10000; }
+#overlay { position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; }
+.inner_popup { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgb(239, 239, 239) none repeat scroll 0% 0%; padding: 50px; display: flex; -moz-box-orient: vertical; -moz-box-direction: normal; flex-direction: column; -moz-box-align: center; align-items: center; -moz-box-pack: center; justify-content: center; border-radius: 50px; text-align: center; max-width: 600px; width: 70%; color: rgb(0, 0, 0); }
+.inner_popup .content { display: block; background: transparent none repeat scroll 0% 0%; width: 100%; padding: 0px; }
+.inner_popup h1 { color: rgb(0, 133, 207); margin: 10px 0px; }
+.inner_popup p { margin: 5px 0px; line-height: 25px; }
+.inner_popup img { max-width: 130px; margin: 5px auto; }
+.inner_popup form { width: 95%; margin: 0px auto; }
+.inner_popup form input { text-indent: 0px; width: 100%; border-radius: 5px; line-height: 24px; font-size: 18px; outline: medium none; padding: 5px; margin: 5px auto; }
+.inner_popup form button { cursor: pointer; outline: medium none; width: 98%; background-color: rgb(255, 40, 40); color: rgb(255, 255, 255); border: medium none; border-radius: 10px; box-shadow: 0px 5px 25px -5px rgb(0, 0, 0); animation: 1s ease-in-out 0s alternate none infinite running pulse; font-size: 24px; line-height: 24px; padding: 15px; margin: 15px auto; }
+.inner_popup .prices { display: flex; font-size: 25px; justify-content: center; align-items: center; }
+.inner_popup .prices .oldprice { text-decoration: line-through; padding: 15px; }
+.inner_popup .prices .newprice { padding: 15px; font-size: 1.5em; color: red; font-weight: bold; }
+@media (max-width: 600px), (max-height: 900px) {
+  .inner_popup { width: 90%; padding: 4vh; border-radius: 25px; box-sizing: border-box; }
+  .inner_popup { max-height: 100vh; }
+  .close-popup { top: 1.5vh; right: 1.5vh; width: 3vh; height: 3vh; max-width: 21px; max-height: 21px; }
+}
+@media screen and (max-width: 550px) {
+  .inner_popup h1 { font-size: 22px; }
+  .inner_popup p { font-size: 18px; }
+}
+@media screen and (max-width: 450px) {
+  .inner_popup .prices .newprice { font-size: 22px; }
+  .inner_popup .prices .oldprice { font-size: 18px; }
+  .inner_popup img { max-width: 150px; }
+}
+@media (max-width: 400px), (max-height: 570px) {
+  .inner_popup { max-height: 99vh; padding: 1vh; }
+}
+@media screen and (max-width: 350px) {
+  .inner_popup .prices .newprice { font-size: 18px; padding: 5px; }
+  .inner_popup .prices .oldprice { font-size: 16px; padding: 5px; }
+  .inner_popup h1 { font-size: 18px; }
+  .inner_popup p { font-size: 16px; line-height: 20px; }
+  .inner_popup form input { line-height: 20px; font-size: 16px; }
+  .inner_popup form button { font-size: 20px; line-height: 24px; }
+}
